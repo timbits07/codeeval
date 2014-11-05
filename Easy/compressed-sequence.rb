@@ -1,5 +1,5 @@
 File.open(ARGV[0]).each_line do |line|
-	arg = line.split()
+	arg = line.chomp.split()
 	freq = arg.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
 	sol = []
 	freq.each do |k,v|
